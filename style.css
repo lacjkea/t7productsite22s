@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700&display=swap");
+
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Lato', sans-serif; */
+
+:root {
+  --ws: 1rem;
+  --bckg-c: #b3c7ee;
+  --attention-c: #8763d4;
+  --hover-c: #f374f7;
+  --col-4: #98d3d6;
+  --col-5: #b5f5ce;
+  --font-h: "Bebas Neue", cursive;
+  --font-p: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--bckg-c);
+  font-family: var(--font-p);
+  line-break: anywhere;
+}
+
+/* font sizes - https://type-scale.com/ golden ratio */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-h);
+  padding: var(--ws) 0;
+  padding-bottom: 0;
+}
+
+h1 {
+  font-size: 11.089rem;
+  padding-top: calc(4 * var(--ws));
+  grid-column: 1 / -1;
+}
+
+/* h1 {
+  font-size: 6.854rem;
+} */
+
+h2 {
+  font-size: 4.236rem;
+}
+
+h3 {
+  font-size: 2.618rem;
+}
+
+h4,
+figcaption {
+  font-size: 1.618rem;
+}
+
+figcaption {
+  font-weight: bold;
+}
+
+h5,
+p {
+  font-size: 1rem;
+}
+
+footer,
+small,
+.text_small,
+h6 {
+  font-size: 0.618rem;
+}
+
+h1 span {
+  display: inline-block;
+  color: var(--col-5);
+  transform: translateY(-300px);
+}
+
+h1 span:first-child {
+  animation: anim-r-in-header 800ms ease 600ms forwards;
+}
+
+@keyframes anim-r-in-header {
+  0% {
+    transform: translateY(-200px) scaleX(2) rotate(360deg);
+  }
+  100% {
+    transform: translateY(-4rem) scaleX(-1) rotate(-30deg);
+  }
+}
+
+h1 span:last-child {
+  animation: anim-2-in-header 800ms ease 1000ms forwards;
+}
+
+@keyframes anim-2-in-header {
+  0% {
+    transform: translateY(-200px) scaleX(2) rotate(30deg);
+  }
+  100% {
+    transform: translateY(-4rem) scaleX(1) rotate(330deg);
+  }
+}
+h2 span:first-child {
+  animation: fadeInOut 3s infinite alternate-reverse;
+}
+
+h2 span.wear {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  animation: fadeInOut 3s infinite alternate;
+  color: var(--col-5);
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+header,
+footer {
+  background: var(--bgr);
+}
